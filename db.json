@@ -1,9 +1,61 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "api-models": {
+    "intfloat/multilingual-e5-large": {
+      "docprompt": "passage: ",
+      "queryprompt": "query: ",
+      "embedding_length": 4096,
+      "model_parameters": "118M",
+      "context_length": 512
+    },
+    "distiluse-base-multilingual-cased-v2": {
+      "docprompt": "",
+      "queryprompt": "",
+      "embedding_length": 512,
+      "model_parameters": "135M",
+      "context_length": 128
+    },
+    "paraphrase-multilingual-mpnet-base-v2": {
+      "docprompt": "",
+      "queryprompt": "",
+      "embedding_length": 768,
+      "model_parameters": "278M",
+      "context_length": 128
+    },
+    "nomic-ai/nomic-embed-text-v1": {
+      "docprompt": "",
+      "queryprompt": "search_query: ",
+      "st_additional_params": {
+        "trust_remote_code": true
+      },
+      "embedding_length": 770,
+      "model_parameters": "137M",
+      "context_length": 8192
+    }
+  },
+  "hybridsearch": {
+    "results": [
+      {
+        "properties": {
+          "kg_id": "https://ilmanifesto.it/mema/article/2020-01-22-entra-nel-vivo-lo-show-del-processo-a-donald-trump",
+          "articleextract": "Entra nel vivo lo show del processo a Donald Trump  Impeachment APERTURA TERZO PROCESSO PER IMPEACHMENT CONTRO TRUMP\nSHOW POLITICO VERA POSTA IN GIOCO EFFETTO SU ELETTORATO"
+        },
+        "score": 0.6217575073242188,
+        "explain_score": "\nHybrid (Result Set vector) Document 021ee051-c391-4a84-a0d0-f63754f641b4: original score 0.93971795, normalized score: 0.38445377 - \nHybrid (Result Set keyword) Document 021ee051-c391-4a84-a0d0-f63754f641b4: original score 5.872092, normalized score: 0.2373037"
+      },
+      {
+        "properties": {
+          "kg_id": "https://ilmanifesto.it/mema/article/2023-10-20-elezioni-in-georgia-lex-avvocata-di-trump-si-dichiara-colpevole",
+          "articleextract": "Elezioni in Georgia, l’ex avvocata di Trump si dichiara colpevole Portarla alla sbarra come testimone e non più come imputata è una grande vittoria per procuratrice della Georgia Fani Willis, e forse la pietra tombale giudiziaria per Donald Trump\nUSA, UN COLPO PER L’EX PRESIDENTE L’ex avvocata di Donald Trump, Sydney Powell, tra i protagonisti del disperato tentativo dell’ex presidente di rovesciare l’esito del voto in Stati chiave come la Georgia, si è dicAhiarata colpevole […]\n\nDICHIARAZIONI COLPEVOLEZZA SYDNEY POWELL, EX AVVOCATA DI DONALD TRUMP\nPROCESSO CONTRO TENTATO ROVESCIAMENTO ESITO VOTO PRESIDENZIALI 2020"
+        },
+        "score": 0.5,
+        "explain_score": "\nHybrid (Result Set keyword) Document 515a643e-b461-4fc7-a5e4-c44b85f5b7f4: original score 7.376293, normalized score: 0.5"
+      }
+    ],
+    "parameters": {
+      "query_text": "elezioni usa processo trump",
+      "lang_model_name": "intfloat/multilingual-e5-large",
+      "result_limit": 2,
+      "alpha": 0.5
+    }
+  }
 }
